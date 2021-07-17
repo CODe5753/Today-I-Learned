@@ -77,3 +77,114 @@
 
 
 
+###  Maven vs Gradle 성능 측면
+
+#### Incremental Build
+
+- Gradle은 어떤 Task가 업데이트 되었고 안되었는지 체크하기 때문에 `Incremental Build`를 허용
+
+- 즉, 이미 업데이트된 Task는 업데이트를 안한다는 뜻!
+- 이게 프로젝트 규모(빌드 규모)가 커질수록 빌드 시간의 차이가 점점 벌어진다
+
+#### 설정 주입 방식
+
+- Maven의 경우 멀티 프로젝트에서 특정 설정을 다른 모듈에서 사용하려면 상속을 받아야 함
+- Gradle은 설정 주입 방식을 제공함
+
+#### 캐시
+
+- Gradle은 Concurrent에 안전한 캐시를 허용
+  - 2개 이상의 프로젝트에서 동일한 캐시를 사용할 경우, 서로 Overwrite되지 않도록 checksum 기반의 캐시를 사용
+  - 캐시를 Repository와 동기화 가능
+
+#### 커스터마이징
+
+- 고도로 사용자 정의된 빌드를 작성하기 위해선 Groovy 기반의 Gradle을 사용하는게 훨씬 효율적
+
+#### 코드로 직접 비교
+
+플러그인을 추가하고 빌드하는 과정에서 코드 차이를 살펴보겠습니다.
+
+- Maven 예시 코드
+
+  ```xml
+  <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+      <modelVersion>4.0.0</modelVersion>
+      <groupId>com.programming.mitra</groupId>
+      <artifactId>java-build-tools</artifactId>
+      <packaging>jar</packaging>
+      <version>1.0</version>
+      <dependencies>
+          <dependency>
+              <groupId>junit</groupId>
+              <artifactId>junit</artifactId>
+              <version>4.11</version>
+          </dependency>
+      </dependencies>
+      <build>
+          <plugins>
+              <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-checkstyle-plugin</artifactId>
+                  <version>2.12.1</version>
+                  <executions>
+                      <execution>
+                          <configuration>
+                              <configLocation>config/checkstyle/checkstyle.xml</configLocation>
+                              <consoleOutput>true</consoleOutput>
+                              <failsOnError>true</failsOnError>
+                          </configuration>
+                          <goals>
+                              <goal>check</goal>
+                          </goals>
+                      </execution>
+                  </executions>
+              </plugin>
+              <plugin>
+                  <groupId>org.codehaus.mojo</groupId>
+                  <artifactId>findbugs-maven-plugin</artifactId>
+                  <version>2.5.4</version>
+                  <executions>
+                      <execution>
+                          <goals>
+                              <goal>check</goal>
+                          </goals>
+                      </execution>
+                  </executions>
+              </plugin>
+              <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-pmd-plugin</artifactId>
+                  <version>3.1</version>
+                  <executions>
+                      <execution>
+                          <goals>
+                              <goal>check</goal>
+                          </goals>
+                      </execution>
+                  </executions>
+              </plugin>
+          </plugins>
+      </build>
+  </project>
+  ```
+
+  이런 코드를 Gradle로는 아래와 같이 설정할 수 있습니다.
+
+- Gradle 코드
+
+  ```groovy
+  apply plugin:'java'
+  apply plugin:'checkstyle'
+  apply plugin:'findbugs'
+  apply plugin:'pmd'
+  version ='1.0'
+  repositories {
+      mavenCentral()
+  }
+  dependencies {
+      testCompile group:'junit', name:'junit', version:'4.11'
+  }
+  ```
+
+  `gradle tasks --all`
