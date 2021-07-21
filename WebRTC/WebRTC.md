@@ -23,13 +23,30 @@
 
 ### STUN(Session Traversal Utillities for NAT) 서버
 
-![STUN](/res/webrtc-stun.png)
+<p align="center"><img src="/res/webrtc-stun.png"></p>
 
 - **클라이언트 자신의 Public Address(IP:PORT)를 알려줌**
 - peer간의 직접 연결을 막는 등의 라우터 제한을 결정하는 프로토콜 (현재 다른 peer가 접근 가능한지 여부 결정)
-- 클라이언트는 인터넷을 통해 클라이언트의 Public Address와 라우터의 NAT 뒤에 있는 클라이언트가 접근 가능한지에 대한 답변을 STUN 서버에 요청
+- 클라이언트는 인터넷을 통해 클라이언트의 Public Address와 라우터의 **NAT 뒤에 있는 클라이언트가 접근 가능한지에 대한 답변을 STUN 서버에 요청**
+  - 이 이유는 NAT에 기재되어 있다
 
+### NAT(Network Address Translation)
 
+- 단말에 Public IP 주소를 할당하기 위해 사용
+- 라우터는 Public IP 주소를 갖고 있고 모든 단말들은 라우터에 연결되어 있으며 Private IP 주소를 가짐
+- 각각의 단말이 유일한 Public IP 없이 인터넷 상에서 검색 가능
+  - 공유기에 Public IP가 물려있고 공유기 하위에 Private IP(192.168.0.XXX)가 물린것과 같다
+- 몇몇 라우터는 **Symmetric NAT**라 불리는 제한을 위한 NAT를 사용한다. 즉, **peer들이 이전에 연결한 적 있는 연결만 허용**한다.
+  - 따라서, **STUN 서버에 의해 Public IP를 발견한다 해도 모두가 연결할 수 있는 것은 아님**
+    - **이를 위해 TURN이 필요**
+
+### TURN(Traversal Using Relays around NAT) 서버
+
+<p align="center"><img src="/res/webrtc-turn.png"></p>
+
+- TURN 서버와 연결하고 모든 정보를 그 서버에 전달하는 것으로 Symmetric NAT 제한을 우회하는 것을 의미
+- 이를 위해 TURN 서버와 연결을 한 후 **모든 peer들에게** "**저 서버에 모든 패킷을 보내고 다시 나(TURN 서버)에게 전달해줘**"라고 해야 한다
+- 이 과정에서 **오버헤드가 발생**하고 다른 대안이 없을 경우에만 사용한다
 
 ---
 
