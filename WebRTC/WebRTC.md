@@ -19,12 +19,15 @@
 - 실제 연결을 맺음
 - 이후 스티리밍 오디오/비디오/데이터를 주고 받을 수 있어야 함
 
+  
 
-이를 위해 WebRTC는 다음 API를 제공합니다.
+### STUN(Session Traversal Utillities for NAT) 서버
 
-- MediaStream: 사용자의 카메라 혹은 마이크 등 input 기기의 데이터 스트림에 접근
-- RTCPeerConnection: 암호화/대역폭 관리 기능. 오디오/비디오 연결을 함
-- RTCDataChannel: 일반적인 데이터 P2P 통신
+![STUN](/res/webrtc-stun.png)
+
+- **클라이언트 자신의 Public Address(IP:PORT)를 알려줌**
+- peer간의 직접 연결을 막는 등의 라우터 제한을 결정하는 프로토콜 (현재 다른 peer가 접근 가능한지 여부 결정)
+- 클라이언트는 인터넷을 통해 클라이언트의 Public Address와 라우터의 NAT 뒤에 있는 클라이언트가 접근 가능한지에 대한 답변을 STUN 서버에 요청
 
 
 
@@ -35,3 +38,4 @@
 - [WebRTC](https://velog.io/@skyni/WebRTC%EC%97%90-%EB%8C%80%ED%95%9C-%EC%A0%95%EB%A6%AC)
 - [WebRTC 연결방식](https://6987.tistory.com/entry/WebRTC-%EB%AF%B8%EB%94%94%EC%96%B4-%EC%97%B0%EA%B2%B0-%EB%B0%A9%EC%8B%9D-MCU-SFU-P2P)
 - [WebRTC Kurento](https://gh402.tistory.com/43)
+- [WebRTC 이론 및 P2P, SFU 실험](https://millo-l.github.io/WebRTC-%EC%9D%B4%EB%A1%A0-%EC%A0%95%EB%A6%AC%ED%95%98%EA%B8%B0/)
