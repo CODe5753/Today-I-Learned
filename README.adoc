@@ -44,7 +44,7 @@
 | 테이블 조인
 
 .2+| Algorithm
-| link:Algorithm%2f2%ec%b0%a8%ec%9b%90+imos%eb%b2%95.md[2차원 IMOS]
-| link:Algorithm%5cMerge+Sort.md[Merge Sort]
+| link:Algorithm/2차원%20imos법.md[2차원 IMOS]
+| link:Algorithm/Merge%20Sort.md[Merge Sort]
 
 |===
