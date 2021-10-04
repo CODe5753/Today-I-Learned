@@ -23,7 +23,7 @@
 | link:Spring/JWT.md[JWT]
 | link:Spring/Spring%20vs%20SpringBoot.md[Spring vs Spring Boot]
 | link:Spring/SPA.md[SPA]
-| MVC 패턴
+| link:Spring/MVC%20Pattern.md[Spring MVC 패턴]
 
 .2+| Java
 | Java 버전별 특징
