@@ -49,7 +49,7 @@
 | link:Algorithm/2차원%20imos법.md[2차원 IMOS]
 | link:Algorithm/Merge%20Sort.md[Merge Sort]
 
-.1+| DesignPattern
+.5+| DesignPattern
 | 디자인패턴
 | Singleton
 | Command
