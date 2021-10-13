@@ -6,7 +6,7 @@
 
 .3+| Common
 | 프레임워크와 라이브러리 차이
-| SOLID란
+| link:Common/SOLID.md[SOLID란]
 | CORS
 
 .2+| OS
@@ -26,12 +26,12 @@
 | link:Spring/MVC%20Pattern.md[Spring MVC 패턴]
 
 .2+| Java
-| Java 버전별 특징
+| link:Language/Java/Java%20버전별%20특징.md[Java 버전별 특징]
 | 인터페이스
 
 .2+| Web
 | SSL 특징과 내부 프로세스
-| HTTP 메서드 종류와 특징
+| link:Web/Http%20Methods.md[HTTP 메서드 종류와 특징]
 
 | Network
 | 네트워크 계층 구조
