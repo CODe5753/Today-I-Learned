@@ -44,6 +44,7 @@
 | DB Index
 | 트랜잭션
 | 테이블 조인
+| Mysql 클러스터링
 
 .2+| Algorithm
 | link:Algorithm/2차원%20imos법.md[2차원 IMOS]
