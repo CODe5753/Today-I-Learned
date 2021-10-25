@@ -42,7 +42,7 @@
 .4+| Web
 | SSL 특징과 내부 프로세스
 | link:Web/Http%20Methods.md[HTTP 메서드 종류와 특징]
-| Http 1.0과 1.1 차이
+| link:Web/Http%201.0과%201.1차이.md[Http 1.0과 1.1 차이]
 | Http 1.1과 2.0+ 차이
 
 | Network
