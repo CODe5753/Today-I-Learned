@@ -17,6 +17,6 @@ for i in feed['entries']:
     markdown_text += f"[{i['title']}]({i['link']}) - {dt}<br>\n"
     print(i['link'], i['title'])
 
-f = open("Tistory.adoc",mode="w", encoding="utf-8")
+f = open("Tistory.md",mode="w", encoding="utf-8")
 f.write(markdown_text)
 f.close()
