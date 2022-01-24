@@ -2,6 +2,7 @@
 티스토리 최신글을 동기화 합니다  
 
 ## 최신 게시글
+[Suggestion 블럭 내에 코드 블럭 작성하기](https://imksh.com/99) - Jan 24, 2022<br>
 [[SpringBoot] Intellij spring boot 프로젝트 생성 방법](https://imksh.com/98) - Jan 10, 2022<br>
 [서버는 어떻게 늘려야할까?](https://imksh.com/97) - Dec 19, 2021<br>
 [SSAFY 수료 후기 (feat. 중도퇴소)](https://imksh.com/96) - Dec 12, 2021<br>
@@ -11,4 +12,3 @@
 [MAC Nodejs 12버전 설치하기](https://imksh.com/92) - Nov 15, 2021<br>
 [SSAFY 7기 지원자 Q&A](https://imksh.com/91) - Nov 08, 2021<br>
 [[MacOS] M1 python3 설치하기](https://imksh.com/90) - Nov 05, 2021<br>
-[[MacOS] Brew & Git 설치하기](https://imksh.com/89) - Nov 04, 2021<br>
