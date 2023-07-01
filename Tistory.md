@@ -2,7 +2,7 @@
 티스토리 최신글을 동기화 합니다  
 
 ## 최신 게시글
-[Java10 무분별한 var를 싫어하는 이유](https://imksh.com/117) - Jun 18, 2023<br>
+[Java10 무분별한 var를 지양해야 하는 이유](https://imksh.com/117) - Jun 18, 2023<br>
 [멀티스레드 분산 환경에서의 로깅(2)](https://imksh.com/116) - Jun 04, 2023<br>
 [멀티스레드 분산 환경에서의 로깅(1)](https://imksh.com/115) - May 21, 2023<br>
 [넥스터즈 회장 후기](https://imksh.com/114) - Apr 23, 2023<br>
