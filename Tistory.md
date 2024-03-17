@@ -2,6 +2,7 @@
 티스토리 최신글을 동기화 합니다  
 
 ## 최신 게시글
+[컨퍼런스 운영 후기](https://imksh.com/124) - Mar 17, 2024<br>
 [넥슨 공채 넥토리얼 최종합격, 정규직 전환 후기](https://imksh.com/123) - Feb 18, 2024<br>
 [후회하지 않으며 살아간다는 것](https://imksh.com/122) - Feb 04, 2024<br>
 [티스토리 댓글을 Github 댓글로 바꾸기 (giscus 적용)](https://imksh.com/121) - Jan 21, 2024<br>
@@ -11,4 +12,3 @@
 [Java10 무분별한 var를 지양해야 하는 이유](https://imksh.com/117) - Jun 18, 2023<br>
 [멀티스레드 분산 환경에서의 로깅(2)](https://imksh.com/116) - Jun 04, 2023<br>
 [멀티스레드 분산 환경에서의 로깅(1)](https://imksh.com/115) - May 21, 2023<br>
-[넥스터즈 회장 후기](https://imksh.com/114) - Apr 23, 2023<br>
